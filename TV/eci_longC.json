@@ -1,0 +1,34 @@
+{
+  "tradeHistory": [],
+  "statistics": {
+    "totalTrades": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0,
+    "totalProfit": 0,
+    "avgWin": 0,
+    "avgLoss": 0,
+    "totalPercentProfit": 0,
+    "avgPercentProfit": 0,
+    "avgDuration": 0,
+    "totalFees": 0,
+    "avgFee": 0,
+    "initialBalance": 100,
+    "currentBalance": 100,
+    "maxBalance": 100,
+    "minBalance": 100,
+    "totalUsedMargin": 0
+  },
+  "settings": {
+    "initialBalance": 100,
+    "currentBalance": 100,
+    "tradePercent": 61,
+    "leverage": 125,
+    "marginUsagePercent": 0,
+    "maxBalance": 100,
+    "minBalance": 100,
+    "totalTrades": 0,
+    "totalProfit": 0,
+    "totalFees": 0
+  }
+}

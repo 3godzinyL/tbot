@@ -1,0 +1,48 @@
+{
+  "tradeHistory": [
+    {
+      "id": "7cebbcae-ea82-4fec-9d86-53d467f08862",
+      "indicator": "ut_bot",
+      "type": "tp_sell",
+      "symbol": "BTCUSDT",
+      "price": 98604.4925,
+      "quantity": 0.01,
+      "leverage": 125,
+      "stopLoss": 0,
+      "takeProfit": 0,
+      "targetPrice": null,
+      "realTrade": true,
+      "startTime": "2024-12-19T19:16:06.021Z",
+      "endTime": null,
+      "profit": null,
+      "exitPrice": null,
+      "duration": null,
+      "margin": null,
+      "percentProfit": null,
+      "fee": null,
+      "percentFee": null
+    }
+  ],
+  "statistics": {
+    "easy_entry": {
+      "totalTpTrades": 0,
+      "tpWins": 0,
+      "tpLosses": 0,
+      "tpWinRate": 0,
+      "tpTotalProfit": 0,
+      "tpAvgProfit": 0,
+      "tpAvgTrend": 0,
+      "tpAvgDuration": 0
+    },
+    "ut_bot": {
+      "totalTpTrades": 1,
+      "tpWins": 0,
+      "tpLosses": 1,
+      "tpWinRate": 0,
+      "tpTotalProfit": 0,
+      "tpAvgProfit": 0,
+      "tpAvgTrend": 0,
+      "tpAvgDuration": 0
+    }
+  }
+}

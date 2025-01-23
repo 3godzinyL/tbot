@@ -1,0 +1,17 @@
+{
+  "tradeHistory": [],
+  "statistics": {
+    "totalTrades": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0,
+    "totalProfit": 0,
+    "avgWin": 0,
+    "avgLoss": 0,
+    "totalPercentProfit": 0,
+    "avgPercentProfit": 0,
+    "avgDuration": 0,
+    "totalFees": 0,
+    "avgFee": 0
+  }
+}
