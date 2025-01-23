@@ -1,0 +1,13 @@
+{
+  "tradeHistory": [],
+  "statistics": {
+    "totalTpTrades": 0,
+    "tpWins": 0,
+    "tpLosses": 0,
+    "tpWinRate": 0,
+    "tpTotalProfit": 0,
+    "tpAvgProfit": 0,
+    "tpAvgTrend": 0,
+    "tpAvgDuration": 0
+  }
+}

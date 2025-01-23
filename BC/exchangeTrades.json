@@ -1,0 +1,14 @@
+{
+  "tradeHistory": [],
+  "statistics": {
+    "totalExchangeTrades": 0,
+    "exchangeWins": 0,
+    "exchangeLosses": 0,
+    "exchangeWinRate": 0.00,
+    "exchangeTotalProfit": 0.00,
+    "exchangeAvgProfit": 0.00,
+    "exchangeTotalFees": 0.00,
+    "exchangeAvgFee": 0.00
+  }
+}
+
