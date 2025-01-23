@@ -1,0 +1,186 @@
+2024-12-19T20:49:33.279Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2024-12-19T22:15:45.499Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.66.225.30:443
+2024-12-21T22:50:17.346Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 13.227.156.103:443
+2024-12-23T07:49:29.252Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:31.529Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:33.543Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:37.789Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:38.596Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.005Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.006Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.007Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.007Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.174Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.329Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.344Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.915Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:40.916Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:41.992Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:43.014Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:45.820Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:46.191Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2024-12-23T07:49:47.211Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:47.226Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:47.382Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:48.236Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:49.323Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:49.928Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:50.066Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:51.461Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:52.829Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:56.205Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:56.454Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:57.250Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:57.747Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:49:58.820Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:02.597Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:03.295Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:10.642Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:11.496Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:11.820Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:11.834Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:12.690Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:14.585Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:17.255Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:17.378Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:18.492Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:18.494Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:18.959Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:23.472Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:25.162Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:27.190Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:34.315Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:34.995Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:36.941Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:37.032Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:50:38.195Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:51:01.262Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-23T07:51:01.263Z error: Error fetching current price for BTCUSDT: connect ETIMEDOUT 18.244.93.2:443
+2024-12-24T18:32:40.457Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T21:05:26.316Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T21:29:35.817Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T21:49:05.311Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T21:53:08.406Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T22:33:40.081Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T22:50:33.056Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T22:59:54.069Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T23:01:37.342Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2024-12-24T23:13:08.961Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2025-01-04T19:30:33.572Z error: Error fetching current price for BTCUSDT: read ECONNRESET
+2025-01-04T21:07:49.709Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2025-01-04T21:15:34.140Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2025-01-04T21:19:14.538Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2025-01-05T01:48:08.229Z error: Error fetching current price for BTCUSDT: Client network socket disconnected before secure TLS connection was established
+2025-01-18T13:38:44.921Z error: Error fetching total balances: Invalid API-key, IP, or permissions for action, request ip: 37.47.210.177
+2025-01-18T13:52:56.021Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:53:56.020Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:54:56.024Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:55:56.032Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:56:56.032Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:57:56.044Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:58:56.044Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T13:59:56.057Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:00:56.061Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:01:56.064Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:02:56.078Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:03:56.082Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:04:56.082Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:05:56.093Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:06:56.101Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:07:56.109Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:08:56.121Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:09:56.121Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:10:56.123Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:11:56.136Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:12:56.148Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:13:56.153Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:14:56.166Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:15:56.169Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:16:56.178Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:17:56.179Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:18:56.183Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:19:56.195Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:20:56.196Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:21:56.202Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:22:56.205Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:23:56.214Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:24:56.220Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:25:56.229Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:26:56.241Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:27:56.255Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:28:56.266Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:29:56.267Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:30:56.274Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:31:56.278Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:32:56.279Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:33:56.287Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:34:56.298Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:35:56.302Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:36:56.309Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:37:56.314Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:38:56.326Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:39:56.334Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:40:56.335Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:41:56.340Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:42:56.341Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:43:56.344Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:44:56.359Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:45:56.368Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:46:56.376Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T14:47:56.383Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:34:57.134Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:34:57.179Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:35:05.949Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:09.151Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:11.973Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:12.428Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:16.736Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:33.229Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:34.306Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:35.474Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:37.223Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:46.198Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:46.539Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:55.013Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:55.541Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T16:35:57.180Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:36:57.183Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:37:57.194Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:38:57.201Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:39:57.206Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:40:57.214Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:41:57.217Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:42:57.219Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:43:57.220Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:44:57.224Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:45:57.225Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:46:57.237Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:47:57.252Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:48:57.254Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:49:57.259Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:50:57.275Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:51:57.288Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:52:57.290Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:53:57.304Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:54:57.307Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:55:57.310Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:56:57.317Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:57:57.330Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:58:57.338Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T16:59:57.350Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:00:57.362Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:01:57.372Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:02:57.377Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:03:57.391Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:04:57.406Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:05:57.417Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:06:57.419Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:07:57.420Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:08:57.421Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:09:57.435Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:10:57.446Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:11:57.454Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T17:12:57.456Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T18:05:57.812Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
+2025-01-18T18:06:41.519Z error: Error fetching current price for BTCUSDT: getaddrinfo ENOTFOUND api.binance.com
+2025-01-18T18:06:57.814Z error: Error fetching server time: getaddrinfo ENOTFOUND fapi.binance.com
