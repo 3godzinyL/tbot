@@ -44,7 +44,7 @@ Utwórz plik `.env` w katalogu głównym projektu i uzupełnij go następującym
 ```env
 BINANCE_API_KEY=<Twój klucz API z Binance>
 BINANCE_API_SECRET=<Twój sekret API z Binance>
-WEBHOOK_TOKEN=<Twój unikalny token webhook>
+WEBHOOK_TOKEN=<Twój unikalny token webhook(nie wymagany)>
 WEBHOOK_PORT=3000
 TRADINGVIEW_USER=<Twoja nazwa użytkownika TradingView>
 TRADINGVIEW_PASS=<Twoje hasło do TradingView>
