@@ -1,0 +1,349 @@
+//=========================================================================== 
+//  @version=5
+//  Enhanced Crypto Indicator for Long Trades - Multi Version
+//  (Parametry ustawień zostały zmodyfikowane na neutralne wartości w celu ochrony prywatności użytkownika)
+//===========================================================================
+
+indicator("Enhanced Crypto Indicator for Long Trades - Multi", overlay=true, shorttitle="ECI-Long-Multi")
+
+// ----------------------------------------------------------------------------
+//  FUNKCJA GENEROWANIA SYGNAŁÓW
+// ----------------------------------------------------------------------------
+generate_signals(short_p, long_p, signal_p, rsi_len, rsi_ob, rsi_os, vol_ma_len) =>
+    [macdLine, signalLine, _] = ta.macd(close, short_p, long_p, signal_p)
+    macdHist = macdLine - signalLine
+    rsi = ta.rsi(close, rsi_len)
+    volume_ma = ta.sma(volume, vol_ma_len)
+
+    buySig  = (macdHist > 0) and (rsi < rsi_os) and (volume > volume_ma)
+    sellSig = (macdHist < 0) and (rsi > rsi_ob) and (volume > volume_ma)
+
+    [buySig, sellSig]
+
+// =============================================================================
+//                          PARAMETRY A / B / C / D / E
+// =============================================================================
+// --- WERSJA A ---
+a_macd_short       = input.int(1, title="A - MACD Short Period",    minval=1, defval=1)
+a_macd_long        = input.int(1, title="A - MACD Long Period",     minval=1, defval=1)
+a_macd_signal      = input.int(1, title="A - MACD Signal Period",   minval=1, defval=1)
+a_rsi_length       = input.int(1, title="A - RSI Length",           defval=1)
+a_rsi_overbought   = input.int(1, title="A - RSI Overbought",       defval=1)
+a_rsi_oversold     = input.int(1, title="A - RSI Oversold",         defval=1)
+a_volume_ma_length = input.int(1, title="A - Volume MA Length",     defval=1)
+
+a_tp_multiplier = input.float(1, title="A - Take Profit Multiplier", step=0.1, defval=1) 
+a_sl_multiplier = input.float(1, title="A - Stop Loss Multiplier",   step=0.1, defval=1) 
+
+// --- WERSJA B ---
+b_macd_short       = input.int(1, title="B - MACD Short Period",    defval=1)
+b_macd_long        = input.int(1, title="B - MACD Long Period",     defval=1)
+b_macd_signal      = input.int(1, title="B - MACD Signal Period",   defval=1)
+b_rsi_length       = input.int(1, title="B - RSI Length",           defval=1)
+b_rsi_overbought   = input.int(1, title="B - RSI Overbought",       defval=1)
+b_rsi_oversold     = input.int(1, title="B - RSI Oversold",         defval=1)
+b_volume_ma_length = input.int(1, title="B - Volume MA Length",     defval=1)
+
+b_tp_multiplier = input.float(1, title="B - Take Profit Multiplier", step=0.1, defval=1)
+b_sl_multiplier = input.float(1, title="B - Stop Loss Multiplier",   step=0.1, defval=1)
+
+// --- WERSJA C ---
+c_macd_short       = input.int(1, title="C - MACD Short Period",    defval=1)
+c_macd_long        = input.int(1, title="C - MACD Long Period",     defval=1)
+c_macd_signal      = input.int(1, title="C - MACD Signal Period",   defval=1)
+c_rsi_length       = input.int(1, title="C - RSI Length",           defval=1)
+c_rsi_overbought   = input.int(1, title="C - RSI Overbought",       defval=1)
+c_rsi_oversold     = input.int(1, title="C - RSI Oversold",         defval=1)
+c_volume_ma_length = input.int(1, title="C - Volume MA Length",     defval=1)
+
+c_tp_multiplier = input.float(1, title="C - Take Profit Multiplier", step=0.1, defval=1)
+c_sl_multiplier = input.float(1, title="C - Stop Loss Multiplier",   step=0.1, defval=1)
+
+// --- WERSJA D ---
+d_macd_short       = input.int(1, title="D - MACD Short Period",    defval=1)
+d_macd_long        = input.int(1, title="D - MACD Long Period",     defval=1)
+d_macd_signal      = input.int(1, title="D - MACD Signal Period",   defval=1)
+d_rsi_length       = input.int(1, title="D - RSI Length",           defval=1)
+d_rsi_overbought   = input.int(1, title="D - RSI Overbought",       defval=1)
+d_rsi_oversold     = input.int(1, title="D - RSI Oversold",         defval=1)
+d_volume_ma_length = input.int(1, title="D - Volume MA Length",     defval=1)
+
+d_tp_multiplier = input.float(1, title="D - Take Profit Multiplier", step=0.1, defval=1)
+d_sl_multiplier = input.float(1, title="D - Stop Loss Multiplier",   step=0.1, defval=1)
+
+// --- WERSJA E ---
+e_macd_short       = input.int(1, title="E - MACD Short Period",    defval=1)
+e_macd_long        = input.int(1, title="E - MACD Long Period",     defval=1)
+e_macd_signal      = input.int(1, title="E - MACD Signal Period",   defval=1)
+e_rsi_length       = input.int(1, title="E - RSI Length",           defval=1)
+e_rsi_overbought   = input.int(1, title="E - RSI Overbought",       defval=1)
+e_rsi_oversold     = input.int(1, title="E - RSI Oversold",         defval=1)
+e_volume_ma_length = input.int(1, title="E - Volume MA Length",     defval=1)
+
+e_tp_multiplier = input.float(1, title="E - Take Profit Multiplier", step=0.1, defval=1)
+e_sl_multiplier = input.float(1, title="E - Stop Loss Multiplier",   step=0.1, defval=1)
+
+
+// -----------------------------------------------------------------------------
+//  GENEROWANIE SYGNAŁÓW A / B / C / D / E
+// -----------------------------------------------------------------------------
+[buy_A, sell_A] = generate_signals(a_macd_short, a_macd_long, a_macd_signal, a_rsi_length, a_rsi_overbought, a_rsi_oversold, a_volume_ma_length)
+[buy_B, sell_B] = generate_signals(b_macd_short, b_macd_long, b_macd_signal, b_rsi_length, b_rsi_overbought, b_rsi_oversold, b_volume_ma_length)
+[buy_C, sell_C] = generate_signals(c_macd_short, c_macd_long, c_macd_signal, c_rsi_length, c_rsi_overbought, c_rsi_oversold, c_volume_ma_length)
+[buy_D, sell_D] = generate_signals(d_macd_short, d_macd_long, d_macd_signal, d_rsi_length, d_rsi_overbought, d_rsi_oversold, d_volume_ma_length)
+[buy_E, sell_E] = generate_signals(e_macd_short, e_macd_long, e_macd_signal, e_rsi_length, e_rsi_overbought, e_rsi_oversold, e_volume_ma_length)
+
+// -----------------------------------------------------------------------------
+//  KOLOROWANIE ŚWIEC (jeśli jakikolwiek buy lub sell z A/B/C/D/E)
+// -----------------------------------------------------------------------------
+var color currentColor = na
+if (buy_A or buy_B or buy_C or buy_D or buy_E)
+    currentColor := color.new(color.green, 50)
+else if (sell_A or sell_B or sell_C or sell_D or sell_E)
+    currentColor := color.new(color.red, 50)
+else
+    currentColor := na
+barcolor(currentColor)
+
+// =============================================================================
+//                  BLOK 1 – WERSJA A
+// =============================================================================
+var float entryPrice_A = na
+var float tp_A         = na
+var float sl_A         = na
+var bool tradeActive_A = false
+
+noSignal_A = not (buy_A or sell_A)
+
+// Wejście (BUY)
+if (buy_A)
+    entryPrice_A := close
+    tp_A := close + (close - ta.lowest(low, 1)) * a_tp_multiplier
+    sl_A := close - (ta.highest(high, 1) - close) * a_sl_multiplier
+    tradeActive_A := true
+
+// Wejście (SELL)
+if (sell_A)
+    entryPrice_A := close
+    tp_A := close - (ta.highest(high, 1) - close) * a_tp_multiplier
+    sl_A := close + (close - ta.lowest(low, 1)) * a_sl_multiplier
+    tradeActive_A := true
+
+// Sprawdzenie TP/SL
+tp_hit_A = ta.cross(close, tp_A) and tradeActive_A and noSignal_A
+sl_hit_A = ta.cross(close, sl_A) and tradeActive_A and noSignal_A
+
+if (tp_hit_A or sl_hit_A)
+    tradeActive_A := false
+
+plot(tp_A, title="Take Profit A", color=color.green, linewidth=1, style=plot.style_linebr)
+plot(sl_A, title="Stop Loss A",   color=color.red,   linewidth=1, style=plot.style_linebr)
+
+plotshape(buy_A,  title="Buy Signal A",  location=location.belowbar, color=color.green, style=shape.labelup,   text="A B")
+plotshape(sell_A, title="Sell Signal A", location=location.abovebar, color=color.red,   style=shape.labeldown, text="A S")
+
+plotshape(tp_hit_A, title="TP Hit A", location=location.abovebar, color=color.green, style=shape.triangledown, text="TP A")
+plotshape(sl_hit_A, title="SL Hit A", location=location.belowbar, color=color.red,   style=shape.triangleup,   text="SL A")
+
+// ALERTY (ZAMIANA NA syminfo.ticker + str.tostring(close))
+if buy_A
+    alert('{"indicator":"eci_long","version":"A","type":"buy","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sell_A
+    alert('{"indicator":"eci_long","version":"A","type":"sell","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if tp_hit_A
+    alert('{"indicator":"eci_long","version":"A","type":"tpCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sl_hit_A
+    alert('{"indicator":"eci_long","version":"A","type":"slCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+
+// =============================================================================
+//                  BLOK 2 – WERSJA B
+// =============================================================================
+var float entryPrice_B = na
+var float tp_B         = na
+var float sl_B         = na
+var bool tradeActive_B = false
+
+noSignal_B = not (buy_B or sell_B)
+
+if (buy_B)
+    entryPrice_B := close
+    tp_B := close + (close - ta.lowest(low, 1)) * b_tp_multiplier
+    sl_B := close - (ta.highest(high, 1) - close) * b_sl_multiplier
+    tradeActive_B := true
+
+if (sell_B)
+    entryPrice_B := close
+    tp_B := close - (ta.highest(high, 1) - close) * b_tp_multiplier
+    sl_B := close + (close - ta.lowest(low, 1)) * b_sl_multiplier
+    tradeActive_B := true
+
+tp_hit_B = ta.cross(close, tp_B) and tradeActive_B and noSignal_B
+sl_hit_B = ta.cross(close, sl_B) and tradeActive_B and noSignal_B
+
+if (tp_hit_B or sl_hit_B)
+    tradeActive_B := false
+
+plot(tp_B, title="Take Profit B", color=color.blue, linewidth=1, style=plot.style_linebr)
+plot(sl_B, title="Stop Loss B",   color=color.orange, linewidth=1, style=plot.style_linebr)
+
+plotshape(buy_B,  title="Buy Signal B",  location=location.belowbar, color=color.blue,   style=shape.labelup,   text="B B")
+plotshape(sell_B, title="Sell Signal B", location=location.abovebar, color=color.orange, style=shape.labeldown, text="B S")
+
+plotshape(tp_hit_B, title="TP Hit B", location=location.abovebar, color=color.blue, style=shape.triangledown, text="TP B")
+plotshape(sl_hit_B, title="SL Hit B", location=location.belowbar, color=color.orange, style=shape.triangleup, text="SL B")
+
+// ALERTY (ZAMIANA NA syminfo.ticker + str.tostring(close))
+if buy_B
+    alert('{"indicator":"eci_long","version":"B","type":"buy","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sell_B
+    alert('{"indicator":"eci_long","version":"B","type":"sell","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if tp_hit_B
+    alert('{"indicator":"eci_long","version":"B","type":"tpCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sl_hit_B
+    alert('{"indicator":"eci_long","version":"B","type":"slCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+
+// =============================================================================
+//                  BLOK 3 – WERSJA C
+// =============================================================================
+var float entryPrice_C = na
+var float tp_C         = na
+var float sl_C         = na
+var bool tradeActive_C = false
+
+noSignal_C = not (buy_C or sell_C)
+
+if (buy_C)
+    entryPrice_C := close
+    tp_C := close + (close - ta.lowest(low, 1)) * c_tp_multiplier
+    sl_C := close - (ta.highest(high, 1) - close) * c_sl_multiplier
+    tradeActive_C := true
+
+if (sell_C)
+    entryPrice_C := close
+    tp_C := close - (ta.highest(high, 1) - close) * c_tp_multiplier
+    sl_C := close + (close - ta.lowest(low, 1)) * c_sl_multiplier
+    tradeActive_C := true
+
+tp_hit_C = ta.cross(close, tp_C) and tradeActive_C and noSignal_C
+sl_hit_C = ta.cross(close, sl_C) and tradeActive_C and noSignal_C
+
+if (tp_hit_C or sl_hit_C)
+    tradeActive_C := false
+
+plot(tp_C, title="Take Profit C", color=color.purple, linewidth=1, style=plot.style_linebr)
+plot(sl_C, title="Stop Loss C",   color=color.maroon, linewidth=1, style=plot.style_linebr)
+
+plotshape(buy_C,  title="Buy Signal C",  location=location.belowbar, color=color.purple, style=shape.labelup,   text="C B")
+plotshape(sell_C, title="Sell Signal C", location=location.abovebar, color=color.maroon, style=shape.labeldown, text="C S")
+
+plotshape(tp_hit_C, title="TP Hit C", location=location.abovebar, color=color.purple, style=shape.triangledown, text="TP C")
+plotshape(sl_hit_C, title="SL Hit C", location=location.belowbar, color=color.maroon, style=shape.triangleup,   text="SL C")
+
+// ALERTY (ZAMIANA NA syminfo.ticker + str.tostring(close))
+if buy_C
+    alert('{"indicator":"eci_long","version":"C","type":"buy","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sell_C
+    alert('{"indicator":"eci_long","version":"C","type":"sell","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if tp_hit_C
+    alert('{"indicator":"eci_long","version":"C","type":"tpCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sl_hit_C
+    alert('{"indicator":"eci_long","version":"C","type":"slCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+
+// =============================================================================
+//                  BLOK 4 – WERSJA D
+// =============================================================================
+var float entryPrice_D = na
+var float tp_D         = na
+var float sl_D         = na
+var bool tradeActive_D = false
+
+noSignal_D = not (buy_D or sell_D)
+
+if (buy_D)
+    entryPrice_D := close
+    tp_D := close + (close - ta.lowest(low, 1)) * d_tp_multiplier
+    sl_D := close - (ta.highest(high, 1) - close) * d_sl_multiplier
+    tradeActive_D := true
+
+if (sell_D)
+    entryPrice_D := close
+    tp_D := close - (ta.highest(high, 1) - close) * d_tp_multiplier
+    sl_D := close + (close - ta.lowest(low, 1)) * d_sl_multiplier
+    tradeActive_D := true
+
+tp_hit_D = ta.cross(close, tp_D) and tradeActive_D and noSignal_D
+sl_hit_D = ta.cross(close, sl_D) and tradeActive_D and noSignal_D
+
+if (tp_hit_D or sl_hit_D)
+    tradeActive_D := false
+
+plot(tp_D, title="Take Profit D", color=color.teal, linewidth=1, style=plot.style_linebr)
+plot(sl_D, title="Stop Loss D",   color=color.navy, linewidth=1, style=plot.style_linebr)
+
+plotshape(buy_D,  title="Buy Signal D",  location=location.belowbar, color=color.teal, style=shape.labelup,   text="D B")
+plotshape(sell_D, title="Sell Signal D", location=location.abovebar, color=color.navy, style=shape.labeldown, text="D S")
+
+plotshape(tp_hit_D, title="TP Hit D", location=location.abovebar, color=color.teal, style=shape.triangledown, text="TP D")
+plotshape(sl_hit_D, title="SL Hit D", location=location.belowbar, color=color.navy, style=shape.triangleup,   text="SL D")
+
+// ALERTY (ZAMIANA NA syminfo.ticker + str.tostring(close))
+if buy_D
+    alert('{"indicator":"eci_long","version":"D","type":"buy","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sell_D
+    alert('{"indicator":"eci_long","version":"D","type":"sell","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if tp_hit_D
+    alert('{"indicator":"eci_long","version":"D","type":"tpCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sl_hit_D
+    alert('{"indicator":"eci_long","version":"D","type":"slCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+
+// =============================================================================
+//                  BLOK 5 – WERSJA E (NOWA)
+// =============================================================================
+var float entryPrice_E = na
+var float tp_E         = na
+var float sl_E         = na
+var bool tradeActive_E = false
+
+noSignal_E = not (buy_E or sell_E)
+
+// Wejście (BUY)
+if (buy_E)
+    entryPrice_E := close
+    tp_E := close + (close - ta.lowest(low, 1)) * e_tp_multiplier
+    sl_E := close - (ta.highest(high, 1) - close) * e_sl_multiplier
+    tradeActive_E := true
+
+// Wejście (SELL)
+if (sell_E)
+    entryPrice_E := close
+    tp_E := close - (ta.highest(high, 1) - close) * e_tp_multiplier
+    sl_E := close + (close - ta.lowest(low, 1)) * e_sl_multiplier
+    tradeActive_E := true
+
+// Sprawdzenie TP/SL
+tp_hit_E = ta.cross(close, tp_E) and tradeActive_E and noSignal_E
+sl_hit_E = ta.cross(close, sl_E) and tradeActive_E and noSignal_E
+
+if (tp_hit_E or sl_hit_E)
+    tradeActive_E := false
+
+// Rysowanie linii TP/SL
+plot(tp_E, title="Take Profit E", color=color.lime, linewidth=1, style=plot.style_linebr)
+plot(sl_E, title="Stop Loss E",   color=color.fuchsia, linewidth=1, style=plot.style_linebr)
+
+// Sygnalizacja na wykresie
+plotshape(buy_E,  title="Buy Signal E",  location=location.belowbar, color=color.lime, style=shape.labelup,   text="E B")
+plotshape(sell_E, title="Sell Signal E", location=location.abovebar, color=color.fuchsia, style=shape.labeldown, text="E S")
+
+plotshape(tp_hit_E, title="TP Hit E", location=location.abovebar, color=color.lime, style=shape.triangledown, text="TP E")
+plotshape(sl_hit_E, title="SL Hit E", location=location.belowbar, color=color.fuchsia, style=shape.triangleup, text="SL E")
+
+// ALERTY (ZAMIANA NA syminfo.ticker + str.tostring(close))
+if buy_E
+    alert('{"indicator":"eci_long","version":"E","type":"buy","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sell_E
+    alert('{"indicator":"eci_long","version":"E","type":"sell","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if tp_hit_E
+    alert('{"indicator":"eci_long","version":"E","type":"tpCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
+if sl_hit_E
+    alert('{"indicator":"eci_long","version":"E","type":"slCross","symbol":"'+syminfo.ticker+'","price":'+str.tostring(close)+'}', alert.freq_once_per_bar)
