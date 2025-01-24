@@ -1,42 +1,37 @@
 # Trade Bot
 
 ## Opis projektu
-Trade Bot to wtyczka do TradingView, która pozwala na automatyczne monitorowanie alertów i analizowanie wyników wskaźników. Aktualnie bot działa w trybie "papierowym", co oznacza, że transakcje są zapisywane w plikach JSON do oceny skuteczności wskaźników. W przyszłych aktualizacjach bot umożliwi rzeczywiste zawieranie transakcji na giełdzie Binance.
+Trade Bot to zaawansowana wtyczka integrująca się z platformą TradingView, umożliwiająca automatyczne monitorowanie alertów wskaźników oraz analizowanie ich skuteczności. Aktualnie bot działa w trybie "papierowym", co oznacza, że transakcje są symulowane i zapisywane w plikach JSON. Dzięki temu można bezpiecznie testować strategie tradingowe przed uruchomieniem rzeczywistych transakcji na giełdzie Binance.
 
 ---
 
 ## Główne funkcje
 
-- **Monitorowanie alertów**: Bot nasłuchuje alertów z TradingView na podstawie struktury DOM strony, bez użycia webhooków.
-- **Obsługa wskaźników**: Analiza wyników wskaźników takich jak `eci_long` (z podwersjami A-E), `easy_entry` i `ut_bot`.
-- **Zarządzanie transakcjami**: Papierowe transakcje są zapisywane w JSON, zawierając szczegółowe dane o ich przebiegu i wynikach.
-- **Integracja z Binance**: Wsparcie dla konta Binance Futures i danych o saldach portfela.
-- **Panel UI**: Interfejs graficzny wstrzyknięty w TradingView dla zarządzania botem.
+- **Monitorowanie alertów:** Bot nasłuchuje alertów z TradingView, korzystając ze struktury DOM strony, co eliminuje konieczność korzystania z webhooków.
+- **Symulacja transakcji:** Symulowane transakcje odwzorowują rzeczywiste trady na giełdzie Binance z uwzględnieniem takich parametrów, jak dźwignia, zyski i opłaty.
+- **Analiza wskaźników:** Obsługa wskaźnika `eci_long` (w wersjach A-E) oraz innych wskaźników, takich jak `easy_entry` i `ut_bot`.
+- **Integracja z Binance:** Odczyt danych o saldach i możliwość uruchomienia rzeczywistych transakcji w przyszłych wersjach.
+- **Interfejs graficzny:** Panel zarządzania wstrzyknięty bezpośrednio w interfejs TradingView.
 
 ---
 
 ## Jak uruchomić projekt
 
 ### 1. Wymagania wstępne
-- Node.js (zalecana wersja: LTS)
-- Konto na TradingView
-- Konto na Binance (dla przyszłych wersji obsługujących transakcje rzeczywiste)
+- Node.js (zalecana wersja: LTS).
+- Konto na TradingView z ustawionymi wskaźnikami.
+- Konto na Binance (dla przyszłych wersji obsługujących transakcje rzeczywiste).
 
 ### 2. Instalacja
-
-#### Instalacja z paczki ZIP
-1. Pobierz plik ZIP z sekcji `Releases` na GitHub.
-2. Rozpakuj zawartość do wybranego folderu.
-3. Zainstaluj Node.js na swoim urządzeniu.
 
 #### Instalacja ręczna
 1. Sklonuj repozytorium:
    ```bash
-   git clone https://github.com/twoj-username/twoj-repo.git
+   git clone https://github.com/3godzinyL/tbot.git
    ```
 2. Przejdź do katalogu projektu:
    ```bash
-   cd twoj-repo
+   cd tbot
    ```
 3. Zainstaluj zależności:
    ```bash
@@ -44,7 +39,7 @@ Trade Bot to wtyczka do TradingView, która pozwala na automatyczne monitorowani
    ```
 
 ### 3. Konfiguracja pliku `.env`
-Utwórz plik `.env` w katalogu głównym projektu i uzupełnij go poniższymi zmiennymi:
+Utwórz plik `.env` w katalogu głównym projektu i uzupełnij go następującymi zmiennymi środowiskowymi:
 
 ```env
 BINANCE_API_KEY=<Twój klucz API z Binance>
@@ -61,16 +56,17 @@ NODE_ENV=development
    ```bash
    npm start
    ```
-2. Bot automatycznie otworzy przeglądarkę i zaloguje się na konto TradingView. Jeśli plik `cookies.json` istnieje, zostaną załadowane ciasteczka, aby pominąć proces logowania.
-3. Na stronie wykresu TradingView możesz zarządzać botem za pomocą wstrzykniętego interfejsu użytkownika.
+2. Bot automatycznie otworzy przeglądarkę i zaloguje się na Twoje konto TradingView. Jeśli istnieje plik `cookies.json`, zostanie on wykorzystany do pominięcia procesu logowania.
+3. Po zalogowaniu przejdź na stronę wykresu TradingView i dodaj wskaźniki oraz alerty obsługiwane przez bota.
 
 ---
 
 ## Dodawanie wskaźników i alertów w TradingView
 
 1. Otwórz wykres w TradingView.
-2. Dodaj wskaźnik obsługiwany przez bota (np. `eci_long` lub `easy_entry`).
-3. Utwórz alert dla wskaźnika z konfiguracją JSON w następującym formacie:
+2. Dodaj wskaźnik obsługiwany przez bota (np. `eci_long`).
+3. Utwórz alert dla wskaźnika w formacie JSON, np.:
+
    ```json
    {
      "type": "buy",
@@ -80,36 +76,42 @@ NODE_ENV=development
      "version": "A"
    }
    ```
-4. Bot automatycznie odbierze alert i przetworzy go.
+4. Bot automatycznie odbierze alert i zapisze transakcję w pliku JSON.
 
 ---
 
-## Struktura plików
+## Struktura projektu
 
-- `index.js`: Główna logika aplikacji.
-- `server.js`: Endpointy API do interakcji z botem.
-- `ui.js`: Kod odpowiedzialny za wstrzykiwanie UI do TradingView.
-- `db.js`: Obsługa plików JSON przechowujących dane transakcji.
-- `binanceApi.js`: Integracja z Binance API.
+- `index.js` – Główna logika aplikacji, uruchamianie monitorowania TradingView.
+- `server.js` – Endpointy API do zarządzania ustawieniami i transakcjami.
+- `ui.js` – Kod odpowiedzialny za wstrzykiwanie interfejsu użytkownika do TradingView.
+- `db.js` – Obsługa plików JSON przechowujących dane o transakcjach.
+- `trade.js` – Logika symulacji i przetwarzania transakcji.
+- `binanceApi.js` – Integracja z Binance API.
+- `eci_longE.json` – Przykładowe dane o transakcjach dla wskaźnika `eci_longE`.
 
 ---
 
 ## Stan projektu
+
 Projekt jest w fazie rozwoju. Obecna wersja działa w trybie papierowym (symulowane transakcje). W przyszłości planowane są:
 - Obsługa rzeczywistych transakcji na Binance Futures.
-- Ulepszone wskaźniki i algorytmy tradingowe.
-- Rozbudowa panelu użytkownika.
-
----
-
-## Wsparcie
-Obecnie bot wspiera tylko giełdę Binance. Jeśli masz pytania lub chcesz zgłosić błąd, otwórz zgłoszenie w sekcji Issues na GitHub.
+- Rozbudowa wskaźników i algorytmów.
+- Ulepszenie interfejsu graficznego.
 
 ---
 
 ## Miejsce na zrzuty ekranu
-1. **Interfejs bota w TradingView**:
-   ![Zrzut ekranu interfejsu](link_do_obrazu.png)
 
-2. **Przykładowe dane o transakcjach**:
-   ![Zrzut ekranu danych](link_do_obrazu.png)
+1. **Interfejs bota w TradingView:**  
+   ![image](https://github.com/user-attachments/assets/2435b990-2aa8-487f-a2c9-83d2a11e7614)
+
+   
+2. **Przykładowe dane o transakcjach:**  
+![image](https://github.com/user-attachments/assets/baaf0a45-d4b2-46c2-b426-d73c33d7333c)
+
+---
+
+## Wsparcie
+
+Jeśli masz pytania, chcesz zgłosić błąd lub zasugerować nowe funkcje, otwórz zgłoszenie w sekcji Issues na GitHubie. Zachęcam również do dyskusji i dzielenia się swoimi uwagami!
