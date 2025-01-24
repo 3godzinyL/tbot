@@ -110,6 +110,9 @@ Projekt jest w fazie rozwoju. Obecna wersja działa w trybie papierowym (symulow
 2. **Przykładowe dane o transakcjach:**  
 ![image](https://github.com/user-attachments/assets/baaf0a45-d4b2-46c2-b426-d73c33d7333c)
 
+3. **Przykładowe uruchomienie bota**
+![image](https://github.com/user-attachments/assets/bc5ed9b4-6e88-4e93-8e5a-31901af41a26)
+
 ---
 
 ## Wsparcie
