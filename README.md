@@ -112,6 +112,9 @@ Projekt jest w fazie rozwoju. Obecna wersja działa w trybie papierowym (symulow
 
 3. **Przykładowe uruchomienie bota**
 ![image](https://github.com/user-attachments/assets/bc5ed9b4-6e88-4e93-8e5a-31901af41a26)
+4. **Wskaznik**
+![image](https://github.com/user-attachments/assets/742bdf64-dd8d-4abe-8506-664b20f63a14)
+![image](https://github.com/user-attachments/assets/3edc1232-58b6-4012-86f4-50e3fa492845)
 
 ---
 
