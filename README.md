@@ -1,4 +1,6 @@
 # Trade Bot
+YourBot- TradingBot owner⬎
+https://discord.gg/RMhcnDuvnH
 
 ## Opis projektu
 Trade Bot to zaawansowana wtyczka integrująca się z platformą TradingView, umożliwiająca automatyczne monitorowanie alertów wskaźników oraz analizowanie ich skuteczności. Aktualnie bot działa w trybie "papierowym", co oznacza, że transakcje są symulowane i zapisywane w plikach JSON. Dzięki temu można bezpiecznie testować strategie tradingowe przed uruchomieniem rzeczywistych transakcji na giełdzie Binance.
