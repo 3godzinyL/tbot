@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Obsługi Bota</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Panel Obsługi Bota</h1>
+  <div class="controls">
+    <button id="start-trade">Start Trade</button>
+    <button id="stop-trade">Stop Trade</button>
+  </div>
+
+  <div class="settings">
+    <h2>Ustawienia</h2>
+    <form id="settings-form">
+      <label for="symbol">Symbol:</label>
+      <input type="text" id="symbol" name="symbol" required>
+      <label for="balancePercentage">Procent Salda:</label>
+      <input type="number" id="balancePercentage" name="balancePercentage" min="1" max="100" required>
+      <button type="submit">Zapisz Ustawienia</button>
+    </form>
+  </div>
+
+  <div class="trade-history">
+    <h2>Historia Transakcji</h2>
+    <ul id="trade-history-list"></ul>
+  </div>
+
+  <div class="statistics">
+    <h2>Statystyki</h2>
+    <p>Łączna liczba transakcji: <span id="total-trades">0</span></p>
+    <p>Wygrane: <span id="wins">0</span></p>
+    <p>Przegrane: <span id="losses">0</span></p>
+    <p>Winrate: <span id="win-rate">0.00</span>%</p>
+    <p>Całkowity Profit: <span id="total-profit">0.00</span> USDT</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

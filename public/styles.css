@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .controls, .settings, .trade-history, .statistics {
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-top: 5px;
+    width: 200px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .trade-history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .trade-history li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
