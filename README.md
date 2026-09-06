@@ -1,4 +1,4 @@
-# Trade Bot
+# Trade Bot ( old code asf)
 YourBot- TradingBot owner⬎
 https://discord.gg/RMhcnDuvnH
 
